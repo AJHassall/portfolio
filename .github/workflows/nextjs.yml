@@ -27,7 +27,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-NODE_ENV: ${{ vars.NODE_ENV }}
+  NODE_ENV: ${{ vars.NODE_ENV }}
 
 jobs:
   # Build job
