@@ -80,8 +80,8 @@ jobs:
       - name: nojekyll
         run: |
           touch .nojekyll
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload Pages artifact ${{ matrix.runs-on }}
+        uses: actions/upload-pages-artifact@v4
         with:
             path: ./out
 
