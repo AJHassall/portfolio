@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// RootLayout.tsx
 import {
   IconBellRinging,
   IconReceipt2,
@@ -6,7 +6,7 @@ import {
   IconKey,
 } from '@tabler/icons-react';
 import classes from './Layout.module.css';
-import { Link, useLocation } from 'react-router-dom'; // Import Link and useLocation
+import { Link, useLocation } from 'react-router-dom';
 
 const tabs = [
   { link: '/projects', label: 'Projects', icon: IconBellRinging },
@@ -16,14 +16,14 @@ const tabs = [
 ];
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
-  const location = useLocation(); // Get current location
-  const activePath = location.pathname; // Get the pathname
+  const location = useLocation();
+  const activePath = location.pathname;
 
   const links = tabs.map((item) => (
     <Link
       to={item.link}
       className={classes.link}
-      data-active={(activePath === item.link).toString()} // Convert boolean to string
+      data-active={(activePath === item.link).toString()}
       key={item.label}
     >
       <item.icon className={classes.linkIcon} stroke={1.5} />
@@ -34,7 +34,10 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className={classes.root}>
       <nav className={classes.navbar}>
-        <div className={classes.navbarMain}>{links}</div>
+
+        <div className={classes.navbarInner}>
+          <div className={classes.navbarMain}>{links}</div>
+        </div>
       </nav>
       <main className={classes.content}>{children}</main>
     </div>

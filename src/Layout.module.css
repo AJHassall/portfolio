@@ -1,68 +1,101 @@
+/* Layout.module.css */
 .root {
-    display: grid;
-    grid-template-columns: 250px 1fr; /* Adjust 250px as needed */
-    min-height: 100vh; /* Ensure full viewport height */
-  }
+  display: flex;
+  height: 100vh;
+}
 
 .navbar {
-    background-color: var(--mantine-color-body);
-   
-    padding: var(--mantine-spacing-md);
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-  }
-  
-  .navbarMain {
-    flex: 1;
-    margin-top: var(--mantine-spacing-xl);
-  }
-  
-  .title {
-    text-transform: uppercase;
-    letter-spacing: -0.25px;
-  }
-  
-  .link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: var(--mantine-font-size-sm);
-    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
-    padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
-    border-radius: var(--mantine-radius-sm);
-    font-weight: 500;
-  
-    &:hover {
-      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-      color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  
-      & .linkIcon {
-        color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-      }
-    }
-  
-    &[data-active] {
-      &,
-      &:hover {
-        background-color: var(--mantine-color-blue-light);
-        color: var(--mantine-color-blue-light-color);
-  
-        & .linkIcon {
-          color: var(--mantine-color-blue-light-color);
-        }
-      }
-    }
-  }
-  
-  .linkIcon {
-    color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
-    margin-right: var(--mantine-spacing-sm);
-    width: 25px;
-    height: 25px;
-  }
-  
-  .footer {
-    border-top: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-    padding-top: var(--mantine-spacing-md);
-  }
+  width: 200px; /* Fixed width */
+  background-color: var(--mantine-color-body);
+  padding: var(--mantine-spacing-md);
+}
+
+.navbarInner {
+  width: 80px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4)); /* Border on navbarInner */
+}
+
+.navbar:hover .navbarInner {
+  width: 100%;
+}
+
+.navbarMain {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  flex: 1;
+  margin-top: var(--mantine-spacing-xl);
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: -0.25px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: var(--mantine-font-size-sm);
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.link:hover {
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+.link:hover .linkIcon {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+.link[data-active='true'],
+.link[data-active='true']:hover {
+  background-color: var(--mantine-color-blue-light);
+  color: var(--mantine-color-blue-light-color);
+}
+
+.link[data-active='true'] .linkIcon,
+.link[data-active='true']:hover .linkIcon {
+  color: var(--mantine-color-blue-light-color);
+}
+
+.linkIcon {
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
+  margin-right: var(--mantine-spacing-sm);
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link span {
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 0;
+}
+
+.navbar:hover .link span {
+  opacity: 1;
+  margin-left: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.footer {
+  border-top: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  padding-top: var(--mantine-spacing-md);
+}
