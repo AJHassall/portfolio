@@ -1,18 +1,12 @@
 // RootLayout.tsx
-import {
-  IconBellRinging,
-  IconReceipt2,
-  IconFingerprint,
-  IconKey,
-} from '@tabler/icons-react';
-import classes from './Layout.module.css';
+import { IconFileCv, IconHome } from '@tabler/icons-react';
 import { Link, useLocation } from 'react-router-dom';
+import { ActionToggle } from './components/ColorSchemeToggle/Toggle';
+import classes from './Layout.module.css';
 
 const tabs = [
-  { link: '/projects', label: 'Projects', icon: IconBellRinging },
-  { link: '/contact', label: 'Contact', icon: IconReceipt2 },
-  { link: '/experience', label: 'Experience', icon: IconFingerprint },
-  { link: '/skills', label: 'Skills', icon: IconKey },
+  { link: '/', label: 'Home', icon: IconHome },
+  { link: '/resume', label: 'Résumé', icon: IconFileCv },
 ];
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
@@ -27,16 +21,23 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
       key={item.label}
     >
       <item.icon className={classes.linkIcon} stroke={1.5} />
-      <span>{item.label}</span>
+      <span className={classes.IconLabel}>{item.label}</span>
     </Link>
   ));
 
   return (
     <div className={classes.root}>
       <nav className={classes.navbar}>
-
         <div className={classes.navbarInner}>
-          <div className={classes.navbarMain}>{links}</div>
+          <div className={classes.navbarMain}>
+            {links}
+
+            <div className={classes.link} >
+              <ActionToggle className={classes.linkIcon} />
+              <span className={classes.IconLabel}>Toggle theme </span>
+            </div>
+          </div>
+          S
         </div>
       </nav>
       <main className={classes.content}>{children}</main>

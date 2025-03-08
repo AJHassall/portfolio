@@ -1,7 +1,7 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import { HomePage } from './pages/Home.page';
-import { Projects } from './pages/Projects.page'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import { RootLayout } from './Layout'; // Import the Layout component
+import { HomePage } from './pages/Home.page';
+import { Projects } from './pages/Projects.page';
 import { Resume } from './pages/Resume.module';
 
 const router = createBrowserRouter(
@@ -27,8 +27,6 @@ const router = createBrowserRouter(
           <Projects />
         </RootLayout>
       ),
-      
-
     },
     {
       path: '/resume',
@@ -37,8 +35,6 @@ const router = createBrowserRouter(
           <Resume />
         </RootLayout>
       ),
-      
-
     },
   ],
   { basename: import.meta.env.BASE_URL }

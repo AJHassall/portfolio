@@ -1,17 +1,17 @@
-import { Button, Container, Group, Image, List, Text, ThemeIcon, Title } from '@mantine/core';
+import { Button, Container, Group, Image, List, Text, ThemeIcon, Title, Box } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
-import image from '/productivity.svg'; // Replace with your image
+import image from '/productivity.svg';
 import classes from './HeroHeader.module.css';
 
 export function HeroHeader() {
   return (
-    <Container size="md" mih="100vh">
+    <Container size="md" mih="50vh" className={classes.heroContainer}>
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
             Hi, I'm <span className={classes.highlight}>Adam</span>
           </Title>
-          <Text c="dimmed" mt="md">
+          <Text c="dimmed" mt="md" className={classes.description}>
             Full-stack developer with 3+ years of experience building web applications in the banking and insurance industries. Skilled in C#, ASP.NET, SQL, Azure, and modern web frameworks (React, Next.js, Tailwind CSS).
           </Text>
 
@@ -24,6 +24,7 @@ export function HeroHeader() {
                 <IconCheck size={12} stroke={1.5} />
               </ThemeIcon>
             }
+            className={classes.skillList}
           >
             <List.Item>
               <b>Experienced with .NET and C#</b> - building robust backend applications.
@@ -36,16 +37,18 @@ export function HeroHeader() {
             </List.Item>
           </List>
 
-          <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}>
+          <Group mt={30} className={classes.buttonGroup}>
+            <Button radius="xl" size="md" className={classes.projectButton}>
               View My Projects
             </Button>
-            <Button variant="default" radius="xl" size="md" className={classes.control}>
+            <Button color="red" variant="filled" radius="xl" size="md" className={classes.contactButton}>
               Contact Me
             </Button>
           </Group>
         </div>
-        <Image src={image} alt="Developer Illustration" className={classes.image} />
+        <Box className={classes.imageContainer}>
+          <Image src={image} alt="Developer Illustration" className={classes.image} />
+        </Box>
       </div>
     </Container>
   );

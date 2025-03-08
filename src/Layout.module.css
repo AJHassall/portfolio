@@ -20,6 +20,7 @@
   transition: width 0.3s ease;
   overflow: hidden;
   border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4)); /* Border on navbarInner */
+  height: 100%;
 }
 
 .navbar:hover .navbarInner {
@@ -32,6 +33,7 @@
   padding: 10px;
   flex: 1;
   margin-top: var(--mantine-spacing-xl);
+  height: 100%;
 }
 
 .title {
@@ -82,7 +84,7 @@
   justify-content: center;
 }
 
-.link span {
+.IconLabel {
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -90,7 +92,7 @@
   margin-left: 0;
 }
 
-.navbar:hover .link span {
+.navbar:hover .IconLabel {
   opacity: 1;
   margin-left: 10px;
 }
@@ -105,4 +107,16 @@
 .footer {
   border-top: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   padding-top: var(--mantine-spacing-md);
+}
+
+.themeToggle{
+  margin-top: auto;
+  padding-bottom: 20px;
+  
+}
+
+div.link{
+  margin-top: auto;
+  margin-bottom: 100px;
+
 }
