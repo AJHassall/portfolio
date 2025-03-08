@@ -3,15 +3,20 @@
   align-items: center;
   justify-content: center;
   
-  color: var(--mantine-color-black);
+  background-color: var(--mantine-color-blue-2);
+  margin: 0;
 }
 
 .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: calc(var(--mantine-spacing-xl) * 4) 0;
-  max-width: 1200px;
+  padding-top: calc(var(--mantine-spacing-xl) * 4);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+  padding-left: calc(var(--mantine-spacing-xl) * 2);
+  padding-right: calc(var(--mantine-spacing-xl) * 2);
+
+
   width: 100%;
 }
 
@@ -127,3 +132,4 @@
     width: 300px;
   }
 }
+

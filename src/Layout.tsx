@@ -3,44 +3,27 @@ import { IconFileCv, IconHome } from '@tabler/icons-react';
 import { Link, useLocation } from 'react-router-dom';
 import { ActionToggle } from './components/ColorSchemeToggle/Toggle';
 import classes from './Layout.module.css';
+import { AppShell, Burger, Group } from '@mantine/core';
+import { TableOfContents } from './components/TableOfContent/TableOfContent';
+import { useDisclosure } from '@mantine/hooks';
 
-const tabs = [
-  { link: '/', label: 'Home', icon: IconHome },
-  { link: '/resume', label: 'Résumé', icon: IconFileCv },
-];
+
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
-  const location = useLocation();
-  const activePath = location.pathname;
-
-  const links = tabs.map((item) => (
-    <Link
-      to={item.link}
-      className={classes.link}
-      data-active={(activePath === item.link).toString()}
-      key={item.label}
-    >
-      <item.icon className={classes.linkIcon} stroke={1.5} />
-      <span className={classes.IconLabel}>{item.label}</span>
-    </Link>
-  ));
+  const [opened, { toggle }] = useDisclosure();
 
   return (
-    <div className={classes.root}>
-      <nav className={classes.navbar}>
-        <div className={classes.navbarInner}>
-          <div className={classes.navbarMain}>
-            {links}
-
-            <div className={classes.link} >
-              <ActionToggle className={classes.linkIcon} />
-              <span className={classes.IconLabel}>Toggle theme </span>
-            </div>
-          </div>
-          S
-        </div>
-      </nav>
-      <main className={classes.content}>{children}</main>
-    </div>
+    <AppShell
+      navbar={{ width: 200, breakpoint: 'sm', collapsed: { mobile: !opened }, }}
+      className={classes.root}
+    >
+      <Group h="100%" px="md">
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+      </Group>
+      <AppShell.Navbar className={classes.navbar}>
+        <TableOfContents />
+      </AppShell.Navbar>
+      <AppShell.Main className={classes.content}>{children}</AppShell.Main>
+    </AppShell>
   );
 }

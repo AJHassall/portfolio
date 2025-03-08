@@ -5,7 +5,7 @@ import classes from './HeroHeader.module.css';
 
 export function HeroHeader() {
   return (
-    <Container size="md" mih="50vh" className={classes.heroContainer}>
+    <Container size="auto" mih="30vh" className={classes.heroContainer}>
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
