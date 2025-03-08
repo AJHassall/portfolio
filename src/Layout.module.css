@@ -2,12 +2,17 @@
 .root {
   display: flex;
   height: 100vh;
+  margin-bottom: 0;
+  margin-top: 0;
+
 }
 
 .navbar {
   width: 200px; /* Fixed width */
   background-color: var(--mantine-color-body);
   padding: var(--mantine-spacing-md);
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .navbarInner {
@@ -93,6 +98,8 @@
 .content {
   flex-grow: 1;
   padding: 20px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .footer {

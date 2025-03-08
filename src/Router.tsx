@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { HomePage } from './pages/Home.page';
 import { Projects } from './pages/Projects.page'
 import { RootLayout } from './Layout'; // Import the Layout component
+import { Resume } from './pages/Resume.module';
 
 const router = createBrowserRouter(
   [
@@ -26,6 +27,17 @@ const router = createBrowserRouter(
           <Projects />
         </RootLayout>
       ),
+      
+
+    },
+    {
+      path: '/resume',
+      element: (
+        <RootLayout>
+          <Resume />
+        </RootLayout>
+      ),
+      
 
     },
   ],
