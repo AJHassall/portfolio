@@ -1,21 +1,16 @@
 import { useState } from 'react';
-import { IconListSearch } from '@tabler/icons-react';
 import cx from 'clsx';
-import { Box, Group, Text } from '@mantine/core';
-import classes from './TableOfContent.module.css';
+import { Box } from '@mantine/core';
+import classes from './TableOfContentsFloating.module.css';
 
 const links = [
-  { label: 'Usage', link: '#usage', order: 1 },
-  { label: 'Position and placement', link: '#position', order: 1 },
-  { label: 'With other overlays', link: '#overlays', order: 1 },
-  { label: 'Manage focus', link: '#focus', order: 1 },
-  { label: 'Examples', link: '#1', order: 1 },
-  { label: 'Show on focus', link: '#2', order: 2 },
-  { label: 'Show on hover', link: '#3', order: 2 },
-  { label: 'With form', link: '#4', order: 2 },
+  { label: 'Lorem', link: '#usage', order: 1 },
+  { label: 'Ipsum', link: '#position', order: 1 },
+  { label: 'Delore', link: '#overlays', order: 1 },
+
 ];
 
-export function TableOfContents() {
+export function TableOfContentsFloating() {
   const [active, setActive] = useState(2);
 
   const items = links.map((item, index) => (
@@ -36,10 +31,7 @@ export function TableOfContents() {
 
   return (
     <div className={classes.root}>
-      <Group mb="md">
-        <IconListSearch size={18} stroke={1.5} />
-        <Text>Table of contents</Text>
-      </Group>
+
       <div className={classes.links}>
         <div
           className={classes.indicator}
