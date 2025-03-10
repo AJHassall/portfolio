@@ -33,7 +33,6 @@ export function WorkHistoryCard({
       radius="md"
       p="xl"
       style={{
-        backgroundColor: 'white',
         border: `${rem(1)} solid #e0e0e0`,
         transition: 'transform 200ms ease, box-shadow 200ms ease',
         cursor: link ? 'pointer' : 'default',

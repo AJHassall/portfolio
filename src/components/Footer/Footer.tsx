@@ -1,12 +1,29 @@
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
-import { ActionIcon, Container, Group, Paper, rem } from '@mantine/core';
+import {
+  ActionIcon,
+  Box,
+  Container,
+  Group,
+  Paper,
+  rem,
+  useMantineColorScheme,
+} from '@mantine/core';
 import classes from './Footer.module.css';
 
 export function FooterSimple() {
+  const { colorScheme } = useMantineColorScheme();
+
   return (
     <>
       <div className={classes.footerSpacer} />
-      <div className={classes.footerWrapper}>
+      <Box
+        className={classes.footerWrapper}
+        bg={
+          colorScheme !== 'dark'
+            ? 'dark' // Dark theme background
+            : 'white' // Light theme background
+        }
+      >
         <Container className={classes.inner}>
           <Paper pl="lg" pr="lg" style={{ backgroundColor: 'rgba(0,0,0,0)' }} />
 
@@ -32,7 +49,7 @@ export function FooterSimple() {
             </ActionIcon>
           </Group>
         </Container>
-      </div>
+      </Box>
     </>
   );
 }

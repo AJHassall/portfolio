@@ -1,11 +1,19 @@
 import { IconCheck } from '@tabler/icons-react';
 import image from '/productivity.svg';
-import { Box, Button, Container, Group, Image, List, ThemeIcon, Title } from '@mantine/core';
+import { Box, Button, Container, Group, Image, List, ThemeIcon, Title, useMantineColorScheme, useMantineTheme } from '@mantine/core';
 import classes from './HeroHeader.module.css';
 
 export function HeroHeader() {
+
+  const { colorScheme } = useMantineColorScheme();
+  const theme  = useMantineTheme();
   return (
-    <Container fluid mih="30vh" w="100%" className={classes.heroContainer} p={0}>
+    <Container fluid mih="30vh" w="100%" className={classes.heroContainer} p={0}
+      bg={
+        colorScheme=== 'dark'
+        ? theme.colors.blue[9] // Dark theme background
+        : theme.colors.blue[2]// Light theme background
+      }>
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
@@ -40,7 +48,7 @@ export function HeroHeader() {
                 View My Projects
               </Button>
             </a>
-            <a href="#ContactMe">
+            <a href="#Contact">
               <Button
                 color="red"
                 variant="filled"

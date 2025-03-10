@@ -8,6 +8,7 @@ const links = [
   { label: 'Projects', link: '#Projects', order: 1 },
   { label: 'Skills', link: '#Skills', order: 1 },
   { label: 'Contact', link: '#Contact', order: 1 },
+  { label: 'Certifications', link: '#Certifications', order: '1'}
 ];
 
 export function TableOfContentsFloating() {

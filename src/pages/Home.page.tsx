@@ -1,30 +1,45 @@
 import i1 from '/Echo.png';
-import i2 from '/wolfenstein.png';
-import i3 from '/YouTubeCommentDeleter.png';
-
 import j1 from '/icbc_london_logo.jpeg';
 import j2 from '/mandon_software_limited_logo.jpeg';
-
-import { Container, SimpleGrid, Text, Title, TypographyStylesProvider } from '@mantine/core';
+import i2 from '/wolfenstein.png';
+import i3 from '/YouTubeCommentDeleter.png';
+import {
+  Container,
+  SimpleGrid,
+  Text,
+  Title,
+  TypographyStylesProvider,
+  useMantineColorScheme,
+  useMantineTheme,
+} from '@mantine/core';
+import { Certifications } from '@/components/Certifications/Certifications';
 import { HeroHeader } from '@/components/HeroHeader/HeroHeader';
 import { ContactMeSection } from '@/components/Intro/Contact/ContactSection';
 import { Project } from '@/components/Project/Project';
+import { DownloadResumeLink } from '@/components/ResumeLink/ResumeLink';
 import { SkillsSection } from '@/components/SkillSection/SkillSection';
 import { WorkHistoryCard } from '@/components/WorkHIstoryCard/WorkHistoryCard';
-import { DownloadResumeLink } from '@/components/ResumeLink/ResumeLink';
 
 export function HomePage() {
+  const { colorScheme } = useMantineColorScheme();
+  const theme = useMantineTheme();
+
+  const _bg =
+    colorScheme === 'dark'
+      ? theme.colors.blue[9] // Dark theme background
+      : theme.colors.blue[2]; // Light theme background
+
   return (
     <>
       <HeroHeader />
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="var(--mantine-color-blue-2)"
+          fill={_bg}
           fill-opacity="1"
           d="M0,128L60,133.3C120,139,240,149,360,144C480,139,600,117,720,133.3C840,149,960,203,1080,229.3C1200,256,1320,256,1380,256L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
         />
       </svg>
-      <Container size="sm" p="xl" bg="white">
+      <Container size="sm" p="xl">
         <section id="Introduction">
           <SimpleGrid verticalSpacing="sm">
             <TypographyStylesProvider fz="sm">
@@ -47,7 +62,7 @@ export function HomePage() {
             </TypographyStylesProvider>
           </SimpleGrid>
         </section>
-        
+
         <section id="WorkExperience">
           <SimpleGrid verticalSpacing="xl" pt="xl">
             <Title id="WorkExperience"> Work Experience</Title>
@@ -78,7 +93,7 @@ export function HomePage() {
               ]}
             />
           </SimpleGrid>
-          <DownloadResumeLink/>
+          <DownloadResumeLink />
         </section>
         <section id="Projects">
           <SimpleGrid verticalSpacing="xl" pt="xl">
@@ -119,8 +134,11 @@ export function HomePage() {
         <section id="Skills">
           <SkillsSection />
         </section>
-        <section id='Contact'>
+        <section id="Contact">
           <ContactMeSection />
+        </section>
+        <section id="Certifications">
+          <Certifications />
         </section>
       </Container>
     </>

@@ -2,8 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  background-color: var(--mantine-color-blue-2);
   margin: 0;
   width: 100%;
 }
@@ -31,7 +29,6 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--mantine-color-black);
 }
 
 .highlight {
@@ -39,6 +36,10 @@
   background-color: var(--mantine-color-blue-light);
   border-radius: var(--mantine-radius-sm);
   padding: 4px 12px;
+  -webkit-border-radius: var(--mantine-radius-sm);
+  -moz-border-radius: var(--mantine-radius-sm);
+  -ms-border-radius: var(--mantine-radius-sm);
+  -o-border-radius: var(--mantine-radius-sm);
 }
 
 .description {

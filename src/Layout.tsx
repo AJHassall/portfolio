@@ -1,13 +1,20 @@
 // RootLayout.tsx
 
-import { AppShell, Box, Container, Stack } from '@mantine/core';
+import { AppShell, Box, Container, Stack, useMantineColorScheme } from '@mantine/core';
 import { FooterSimple } from './components/Footer/Footer';
 import { Intro } from './components/Intro/Intro';
-import { SocialLinks } from './components/SocialLinks/SocialLinks';
 import { TableOfContentsFloating } from './components/TableOfContents/TableOfContentsFloating';
 import classes from './Layout.module.css';
+import { ActionToggle } from './components/ColorSchemeToggle/Toggle';
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
+
+      const { colorScheme } = useMantineColorScheme();
+  
+    const _bg = colorScheme=== 'dark'
+    ? 'dark' // Dark theme background
+    : 'white'// Light theme background
+  
   return (
     <AppShell
       navbar={{ width: 500, breakpoint: 'sm', collapsed: { mobile: true } }}
@@ -19,13 +26,13 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
             <Intro />
             <TableOfContentsFloating />
             <Box pt="100%">
-              <SocialLinks />
+              <ActionToggle/>
             </Box>
           </Stack>
         </Container>
       </AppShell.Navbar>
       <AppShell.Main className={classes.content}>
-        <Box bg="white" style={{ zIndex: 1, position: 'relative' }}>
+        <Box style={{ zIndex: 1, position: 'relative' }} bg={_bg}>
           {children}{' '}
         </Box>
         <FooterSimple />
