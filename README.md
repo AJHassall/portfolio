@@ -1,8 +1,8 @@
-# Mantine Vite template
+# Portfolio
 
-## Features
+## Libraries
 
-This template comes with the following features:
+This website uses the following features:
 
 - [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
 - [TypeScript](https://www.typescriptlang.org/)

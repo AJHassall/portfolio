@@ -1,0 +1,47 @@
+.portfolioSection {
+  /* padding-top: calc(var(--mantine-spacing-xl) * 2); */
+  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+  position: relative;
+  padding-left: calc(var(--mantine-spacing-xl) * 2);
+  padding-right: calc(var(--mantine-spacing-xl) * 2);
+}
+
+.portfolioTitle {
+  font-weight: 700;
+}
+
+.portfolioCard {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolioCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolioProjectTitle {
+  margin-bottom: 0.5rem;
+}
+
+.portfolioProjectDescription {
+  line-height: 1.6;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+.wave .shapeFill {
+  fill:var(--mantine-color-blue-2);
+}

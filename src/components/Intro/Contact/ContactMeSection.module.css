@@ -1,0 +1,21 @@
+/* ContactMeSection.module.css */
+.contactSection {
+    padding-top: calc(var(--mantine-spacing-xl) * 2);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+  }
+  
+  .contactTitle {
+    font-weight: 700;
+  }
+  
+  .contactLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--mantine-color-text);
+    transition: color 0.2s ease;
+  }
+  
+  .contactLink:hover {
+    color: var(--mantine-color-primary); /* Change to your primary color */
+  }
