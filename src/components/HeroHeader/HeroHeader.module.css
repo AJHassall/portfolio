@@ -5,16 +5,17 @@
   
   background-color: var(--mantine-color-blue-2);
   margin: 0;
+  width: 100%;
 }
 
 .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: calc(var(--mantine-spacing-xl) * 4);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
-  padding-left: calc(var(--mantine-spacing-xl) * 2);
-  padding-right: calc(var(--mantine-spacing-xl) * 2);
+  padding-top: calc(var(--mantine-spacing-xl));
+  padding-bottom: calc(var(--mantine-spacing-xl));
+  padding-left: calc(var(--mantine-spacing-xl));
+  padding-right: calc(var(--mantine-spacing-xl));
 
 
   width: 100%;

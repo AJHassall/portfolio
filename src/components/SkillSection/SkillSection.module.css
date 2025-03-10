@@ -1,0 +1,25 @@
+/* Skills.module.css */
+.skillsSection {
+    padding-top: calc(var(--mantine-spacing-xl) * 2);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+  }
+  
+  .skillsTitle {
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .skillsCategory {
+    margin-bottom: var(--mantine-spacing-md);
+    font-weight: 600;
+  }
+  
+  .skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mantine-spacing-xs);
+  }
+  
+  .skillsBadge {
+    margin-bottom: var(--mantine-spacing-xs);
+  }

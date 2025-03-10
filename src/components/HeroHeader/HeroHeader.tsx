@@ -1,19 +1,16 @@
-import { Button, Container, Group, Image, List, Text, ThemeIcon, Title, Box } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
 import image from '/productivity.svg';
+import { Box, Button, Container, Group, Image, List, ThemeIcon, Title } from '@mantine/core';
 import classes from './HeroHeader.module.css';
 
 export function HeroHeader() {
   return (
-    <Container size="auto" mih="30vh" className={classes.heroContainer}>
+    <Container fluid mih="30vh" w="100%" className={classes.heroContainer} p={0}>
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
             Hi, I'm <span className={classes.highlight}>Adam</span>
           </Title>
-          <Text c="dimmed" mt="md" className={classes.description}>
-            Full-stack developer with 3+ years of experience building web applications in the banking and insurance industries. Skilled in C#, ASP.NET, SQL, Azure, and modern web frameworks (React, Next.js, Tailwind CSS).
-          </Text>
 
           <List
             mt={30}
@@ -38,12 +35,22 @@ export function HeroHeader() {
           </List>
 
           <Group mt={30} className={classes.buttonGroup}>
-            <Button radius="xl" size="md" className={classes.projectButton}>
-              View My Projects
-            </Button>
-            <Button color="red" variant="filled" radius="xl" size="md" className={classes.contactButton}>
-              Contact Me
-            </Button>
+            <a href="#Projects">
+              <Button radius="xl" size="md" className={classes.projectButton}>
+                View My Projects
+              </Button>
+            </a>
+            <a href="#ContactMe">
+              <Button
+                color="red"
+                variant="filled"
+                radius="xl"
+                size="md"
+                className={classes.contactButton}
+              >
+                Contact Me
+              </Button>
+            </a>
           </Group>
         </div>
         <Box className={classes.imageContainer}>

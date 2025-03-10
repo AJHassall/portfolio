@@ -1,0 +1,13 @@
+.projectCardLink {
+    text-decoration: none; /* Remove default underline from anchor */
+    display: block; /* Make the anchor fill the card */
+  }
+  
+  .projectCard {
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+  
+  .projectCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
