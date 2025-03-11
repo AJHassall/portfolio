@@ -9,6 +9,10 @@
   background-color: light-dark(var(--mantine-color-gray-0));
   height: 115px;
   padding-left: 400px;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    padding-left: 0;
+  }
 }
 
 .inner {

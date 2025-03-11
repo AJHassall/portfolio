@@ -1,8 +1,9 @@
-import i1 from '/Echo.png';
-import j1 from '/icbc_london_logo.jpeg';
-import j2 from '/mandon_software_limited_logo.jpeg';
-import i2 from '/wolfenstein.png';
-import i3 from '/YouTubeCommentDeleter.png';
+import echoPng from '/Echo.png';
+import icbcJpeg from '/icbc_london_logo.jpeg';
+import mandonJpeg from '/mandon_software_limited_logo.jpeg';
+import wolfensteinPng from '/wolfenstein.png';
+import ytdPng from '/YouTubeCommentDeleter.png';
+import blogPng from '/blog.png'
 import {
   Container,
   SimpleGrid,
@@ -68,7 +69,7 @@ export function HomePage() {
             <Title id="WorkExperience"> Work Experience</Title>
             <WorkHistoryCard
               title="Software Engineer | Consultant"
-              imageUrl={j1} // Replace with your image path
+              imageUrl={icbcJpeg} // Replace with your image path
               description="Contributed to enhancing financial applications using C#, ASP.NET, and SQL. Worked in an Agile environment, managed application releases, resolved technical issues, and optimized database queries. Integrated RabbitMQ for seamless communication between applications."
               company="Wiley Edge (Placement at ICBC London Limited)"
               startDate={new Date(2022, 4, 1)} // May 1, 2022
@@ -77,11 +78,28 @@ export function HomePage() {
             />
             <WorkHistoryCard
               title="Software Developer"
-              imageUrl={j2} // Replace with your image path
+              imageUrl={mandonJpeg} // Replace with your image path
               description="Developed web-based insurance solutions using React, JavaScript, ASP.NET, and Azure. Progressed from an apprenticeship to leading projects, implementing features like quote calculations, new policies, claim management, and payments. Proficient in Azure cloud infrastructure."
               company="Mandon Software Limited"
-              startDate={new Date(2020, 7, 1)} // August 1, 2020
+              startDate={new Date(2021, 7, 1)} // August 1, 2020
               endDate={new Date(2022, 4, 31)} // May 31, 2022
+              skills={[
+                'React',
+                'JavaScript',
+                'ASP.NET',
+                'Azure',
+                'CSS',
+                'MVC',
+                'Progress Open Edge',
+              ]}
+            />
+            <WorkHistoryCard
+              title="Apprentice Software Developer"
+              imageUrl={mandonJpeg} // Replace with your image path
+              description="Developed web-based insurance solutions using React, JavaScript, ASP.NET, and Azure."
+              company="Mandon Software Limited"
+              startDate={new Date(2020, 7, 1)} // August 1, 2020
+              endDate={new Date(2021, 7, 31)} // May 31, 2022
               skills={[
                 'React',
                 'JavaScript',
@@ -99,9 +117,16 @@ export function HomePage() {
           <SimpleGrid verticalSpacing="xl" pt="xl">
             <Title> Projects</Title>
             <Project
+              title="Blog"
+              description="Blog website written in C#"
+              imageUrl={blogPng}
+              githubUrl="https://github.com/AJHassall/blog"
+              technologies={['C#', 'Postgres', 'Blazor', 'Docker']}
+            />
+            <Project
               title="Echo"
               description="Real time desktop audio transposition using rust."
-              imageUrl={i1}
+              imageUrl={echoPng}
               githubUrl="https://github.com/AJHassall/echo"
               technologies={[
                 'Rust',
@@ -118,14 +143,14 @@ export function HomePage() {
             <Project
               title="SFML wolfenstein"
               description="wolfenstein style game engine built with C++ and SFML"
-              imageUrl={i2}
+              imageUrl={wolfensteinPng}
               githubUrl="https://github.com/AJHassall/sfml-wolfenstein"
               technologies={['C++', 'SFML', 'PREMAKE']}
             />
             <Project
               title="Youtube comment blocker"
               description="Hides all comments from selected users."
-              imageUrl={i3}
+              imageUrl={ytdPng}
               githubUrl="git@github.com:AJHassall/youtube-comment-blocker.git"
               technologies={['Extension', 'Javascript', 'Docker', 'Postgres']}
             />
