@@ -40,32 +40,9 @@ export function HomePage() {
           d="M0,128L60,133.3C120,139,240,149,360,144C480,139,600,117,720,133.3C840,149,960,203,1080,229.3C1200,256,1320,256,1380,256L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
         />
       </svg>
-      <Container size="sm" p="xl">
-        <section id="Introduction">
-          <SimpleGrid verticalSpacing="sm">
-            <TypographyStylesProvider fz="sm">
-              <Text inherit>
-                I'm a full-stack developer with over three years of experience building robust web
-                applications in the banking and insurance sectors. My technical expertise spans C#,
-                ASP.NET, SQL, and Azure, alongside modern front-end frameworks like React and
-                Next.js.
-              </Text>
-              <Text inherit>
-                Throughout my career, I've consistently tackled complex technical challenges,
-                optimized database performance, and delivered impactful solutions within Agile
-                environments. I'm passionate about continuous learning and recently achieved the
-                Azure AZ-900 certification.
-              </Text>
-              <Text inherit>
-                In addition to my professional experience, I'm actively refining my skills through
-                personal projects, ensuring I stay ahead of modern development practices."
-              </Text>
-            </TypographyStylesProvider>
-          </SimpleGrid>
-        </section>
-
+      <Container size="sm" p="md">
         <section id="WorkExperience">
-          <SimpleGrid verticalSpacing="xl" pt="xl">
+          <SimpleGrid verticalSpacing="xl">
             <Title id="WorkExperience"> Work Experience</Title>
             <WorkHistoryCard
               title="Software Engineer | Consultant"
