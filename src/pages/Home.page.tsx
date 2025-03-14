@@ -4,6 +4,7 @@ import mandonJpeg from '/mandon_software_limited_logo.jpeg';
 import wolfensteinPng from '/wolfenstein.png';
 import ytdPng from '/YouTubeCommentDeleter.png';
 import blogPng from '/blog.png'
+import webCrawlerPng from '/webcrawler.png'
 import {
   Container,
   SimpleGrid,
@@ -93,6 +94,13 @@ export function HomePage() {
         <section id="Projects">
           <SimpleGrid verticalSpacing="xl" pt="xl">
             <Title> Projects</Title>
+            <Project
+              title="Webcrawler"
+              description="Webcrawler written in python"
+              imageUrl={webCrawlerPng}
+              githubUrl="https://github.com/AJHassall/webcrawler"
+              technologies={['Python', 'Flask', 'sqlalchemy']}
+            />
             <Project
               title="Blog"
               description="Blog website written in C#"
