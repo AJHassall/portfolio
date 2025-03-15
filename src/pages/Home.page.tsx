@@ -8,9 +8,7 @@ import webCrawlerPng from '/webcrawler.png'
 import {
   Container,
   SimpleGrid,
-  Text,
   Title,
-  TypographyStylesProvider,
   useMantineColorScheme,
   useMantineTheme,
 } from '@mantine/core';
@@ -52,7 +50,7 @@ export function HomePage() {
               company="Wiley Edge (Placement at ICBC London Limited)"
               startDate={new Date(2022, 4, 1)} // May 1, 2022
               endDate={new Date(2023, 7, 31)} // August 31, 2023
-              skills={['C#', 'ASP.NET', 'SQL', 'Agile', 'RabbitMQ', 'MS SQL']}
+              skills={['C#', 'ASP.NET', 'SQL', 'Agile', 'RabbitMQ', 'MS SQL', 'JQuery']}
             />
             <WorkHistoryCard
               title="Software Developer"
@@ -66,6 +64,7 @@ export function HomePage() {
                 'JavaScript',
                 'ASP.NET',
                 'Azure',
+                'JQuery',
                 'CSS',
                 'MVC',
                 'Progress Open Edge',
@@ -86,6 +85,7 @@ export function HomePage() {
                 'CSS',
                 'MVC',
                 'Progress Open Edge',
+                'JQuery'
               ]}
             />
           </SimpleGrid>
@@ -99,7 +99,7 @@ export function HomePage() {
               description="Webcrawler written in python"
               imageUrl={webCrawlerPng}
               githubUrl="https://github.com/AJHassall/webcrawler"
-              technologies={['Python', 'Flask', 'sqlalchemy']}
+              technologies={['Python', 'Flask', 'SqlAlchemy']}
             />
             <Project
               title="Blog"
