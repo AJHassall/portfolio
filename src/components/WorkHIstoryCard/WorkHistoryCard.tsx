@@ -39,7 +39,7 @@ export function WorkHistoryCard({
       }}
     >
       <Box style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <Card.Section p="md">
+        <Card.Section p="md" w="100%">
           <Text fw={500}>{title}</Text>
           <Group justify='space-between'>
             <Text size="md">{company}</Text>
