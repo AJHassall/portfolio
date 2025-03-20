@@ -25,7 +25,7 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
           <Stack align="stretch" justify="flex-start">
             <Intro />
             <TableOfContentsFloating />
-            <Box pt="100%">
+            <Box>
               <ActionToggle/>
             </Box>
           </Stack>
