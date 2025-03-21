@@ -1,17 +1,17 @@
 .slideUpHidden {
     opacity: 0;
-    transform: translateY(20px); /* Adjust the starting position */
+    transform: translateY(20px);
     transition-property: opacity, transform;
-    transition-duration: var(--slide-up-duration, 0.5s); /* Use CSS variable for duration */
-    transition-timing-function: var(--slide-up-timing-function, ease); /* Use CSS variable for timing function */
-    transition-delay: var(--slide-up-delay, 0s); /* Use CSS variable for delay */
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
   }
   
   .slideUpVisible {
     opacity: 1;
     transform: translateY(0);
     transition-property: opacity, transform;
-    transition-duration: var(--slide-up-duration, 0.5s);
-    transition-timing-function: var(--slide-up-timing-function, ease);
-    transition-delay: var(--slide-up-delay, 0s);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
   }
