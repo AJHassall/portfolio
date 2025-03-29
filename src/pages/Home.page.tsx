@@ -97,11 +97,11 @@ export function HomePage() {
           <SimpleGrid verticalSpacing="xl" pt="xl">
             <Title> Projects</Title>
             <Project
-              title="Contact Management Service"
-              description="Contact Management Service, an example of dependency injection, repository and unit of work patterns"
+              title="Customer Relationship Manager"
+              description="Customer Relationship Manager API, an example of dependency injection, repository and unit of work patterns"
               imageUrl={cmsPng}
-              githubUrl="https://github.com/AJHassall/ContactManagmentSystem"
-              technologies={['C#', '.Net', 'nunit', 'swagger']}
+              githubUrl="https://github.com/AJHassall/CustomerRelationshipManager"
+              technologies={['C#', '.Net', 'nunit', 'swagger', 'crud', 'rest']}
             />
             <Project
               title="Webcrawler"
