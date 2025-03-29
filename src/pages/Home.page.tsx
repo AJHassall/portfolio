@@ -3,8 +3,10 @@ import icbcJpeg from '/icbc_london_logo.jpeg';
 import mandonJpeg from '/mandon_software_limited_logo.jpeg';
 import wolfensteinPng from '/wolfenstein.png';
 import ytdPng from '/YouTubeCommentDeleter.png';
-import blogPng from '/blog.png'
-import webCrawlerPng from '/webcrawler.png'
+import blogPng from '/blog.png';
+import webCrawlerPng from '/webcrawler.png';
+import cmsPng from '/cms.png'
+
 import {
   Container,
   SimpleGrid,
@@ -94,6 +96,13 @@ export function HomePage() {
         <section id="Projects">
           <SimpleGrid verticalSpacing="xl" pt="xl">
             <Title> Projects</Title>
+            <Project
+              title="Contact Management Service"
+              description="Contact Management Service, an example of dependency injection, repository and unit of work patterns"
+              imageUrl={cmsPng}
+              githubUrl="https://github.com/AJHassall/ContactManagmentSystem"
+              technologies={['C#', '.Net', 'nunit', 'swagger']}
+            />
             <Project
               title="Webcrawler"
               description="Webcrawler written in python"
